@@ -1,0 +1,27 @@
+name: RknList Dockerize
+
+on:
+  push:
+    branches: 
+      - main
+    paths:
+      - 'RknList/**'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+
+    - name: Get the version
+      id: vars
+      run: echo ::set-output name=ver::$(grep -o -P '(?<=<Version>)[\d\.]+(?=<\/Version>)' RknList/*.csproj)
+
+    - name: Build the Docker image
+      run: docker build . --file RknList/Dockerfile --tag shumutun/rknlist:${{steps.vars.outputs.ver}}
+
+    - name: Login to registry
+      run: docker login --username ${{ secrets.DOCKER_USERNAME }} --password ${{ secrets.DOCKER_TOKEN }}
+      
+    - name: Push the Docker image
+      run: docker push shumutun/rknlist:${{steps.vars.outputs.ver}}
