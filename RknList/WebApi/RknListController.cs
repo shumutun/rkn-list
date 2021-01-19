@@ -25,7 +25,6 @@ namespace RknList.WebApi
                 foreach (var item in curList)
                     resBuilder.AppendLine($"add list=rkn address={item}");
             }
-            resBuilder.AppendLine($"/log info {DateTime.UtcNow.ToShortDateString()} (UTC)");
             return Content(resBuilder.ToString(), "text/plain", Encoding.UTF8);
         }
     }
