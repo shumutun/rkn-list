@@ -10,6 +10,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{
 		.github\workflows\rknlist-dockerize.yml = .github\workflows\rknlist-dockerize.yml
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "deployment", "deployment", "{207C4ABD-88D7-4B7F-93F6-5A168D690731}"
+	ProjectSection(SolutionItems) = preProject
+		deployment\docker-run.txt = deployment\docker-run.txt
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

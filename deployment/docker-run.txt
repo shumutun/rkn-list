@@ -1,0 +1,1 @@
+docker run -d -p 5375:8080 --restart=on-failure:10 shumutun/rknlist:1.0 rknlist
