@@ -1,0 +1,4 @@
+{
+  "ZapretInfoDumpUrl": "https://raw.githubusercontent.com/zapret-info/z-i/master/dump.csv",
+  "ZapretInfoDumpObserveIntervalMs": 86400
+}
