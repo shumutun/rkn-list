@@ -1,1 +1,1 @@
-docker run -d -p 5375:8080 --restart=on-failure:10 shumutun/rknlist:1.1 rknlist
+docker run -d -p 127.0.0.1:5375:8080 --restart=on-failure:10 shumutun/rknlist:1.1 rknlist
